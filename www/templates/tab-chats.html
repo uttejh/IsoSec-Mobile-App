@@ -1,0 +1,78 @@
+<ion-view view-title="Chats">
+  <ion-content>
+    <ion-refresher on-refresh="doRefresh()">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+    <h3>Expected Vistors:</h3>
+    <table style="width:100%">
+      <tr>
+        <th><b>Type</b></th>
+        <th><b>Name</b></th> 
+        <th><b>Mobile No.</b></th>
+        <th><center><b>Permission</b></center></th>
+      </tr>
+      <tr>
+        <td>Visitor</td>
+        <td>Prithvi</td>
+        <td>8712333671</td>
+        <td>
+          <center>
+            <button class="button button-small button-assertive" ng-click="disable(x)">
+              Disable 
+            </button>  
+          </center>
+        </td>
+      </tr>
+      <tr>
+        <td>Visitor</td>
+        <td>Sumeesha</td>
+        <td>8500859900</td>
+        <td>
+          <center>
+            <button class="button button-small button-assertive" ng-click="disable(x)">
+              Disable 
+            </button>  
+          </center>
+        </td>
+      </tr>
+      <tr>
+        <td>Cab</td>
+        <td>-</td>
+        <td>-</td>
+        <td>
+          <center>
+            <button class="button button-small button-assertive" ng-click="disable(x)">
+              Disable 
+            </button>  
+          </center>
+        </td>
+      </tr>
+      <tr>
+        <td>Delivery Guy</td>
+        <td>-</td>
+        <td>-</td>
+        <td>
+          <center>
+            <button class="button button-small button-assertive" ng-click="disable(x)">
+              Disable 
+            </button>  
+          </center>
+        </td>
+      </tr>
+      <!-- <tr ng-repeat="x in myvis track by $index">
+        
+        <td>{{x.type}} </td>
+        <td>{{x.name}} </td>
+        <td>{{x.mobile}} </td>
+        <td>
+          <center>
+            <button class="button button-small button-assertive" ng-click="disable(x)">
+              Disable 
+            </button>  
+          </center>
+        </td>
+      </tr> -->
+    </table>
+  </ion-content>
+</ion-view>

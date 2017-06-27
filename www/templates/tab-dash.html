@@ -1,0 +1,57 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <h2>Welcome to ISOSEC!</h2>
+    <h4>I am expecting a:</h4>
+    <div class="list card">
+      
+      <a href="#" class="item item-icon-left" ng-click="visitorshow=!visitorshow">
+        <i class="icon ion-ios-person"></i>
+        Visitor
+      </a>
+      <div class="list " ng-show="visitorshow">
+        <h4>&nbsp; Please provide the following details:</h4>
+        <label class="item item-input">
+          <input type="text" placeholder="Visitor Name" ng-model="visitor.name">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Visitor Mobile No." ng-model="visitor.mobile">
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            No. of Visitors
+          </div>
+          <select ng-model="visitor.number">
+            <option selected>1</option>
+            <option >2</option>
+            <option>3 or more...</option>
+            <option >Unknown</option>
+          </select>
+        </label>
+        <button class="button button-block button-balanced" ng-click="visitorinform()">
+          Submit 
+        </button>
+        <p><center><strong>OR</strong></center></p>
+        <button class="button button-block button-positive" ng-click="visitorinform()">
+          <i class="icon ion-android-contact"></i>
+          &nbsp;Share Contact 
+        </button>
+      </div>
+  
+      <a href="#" class="item item-icon-left" ng-click="visitorinform2('Cab')">
+        <i class="icon ion-model-s"></i>
+        Cab
+      </a>
+
+      <a href="#" class="item item-icon-left" ng-click="visitorinform2('Delivery Guy')">
+        <i class="icon ion-pizza"></i>
+        Delivery Guy
+      </a>
+  <!-- <button onclick="findContacts()">FIND CONTACT</button> -->
+    </div>
+        <ion-list>
+          <ion-item ng-repeat="con in contacts">
+            {{con.displayName}}
+          </ion-item>
+        </ion-list>
+  </ion-content>
+</ion-view>
